@@ -1,4 +1,7 @@
-import _ from "lodash";
+import getType from "./getType";
 
-console.log("hello world");
-console.log(_.camelCase("hello world"));
+console.log(getType(123)); // [object Number]
+console.log(getType(false)); // [object Boolean]
+console.log(getType(null)); // [object Null]
+console.log(getType({})); // [object Object]
+console.log(getType([])); // [object Array]
